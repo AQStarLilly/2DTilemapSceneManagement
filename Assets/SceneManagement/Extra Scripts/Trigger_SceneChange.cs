@@ -13,7 +13,7 @@ public class Trigger_SceneChange : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player entered the trigger! Loading scene: " + sceneToLoad);
-            SceneTransitionManager.Instance.SetSpawnPoint(spawnPointName);
+            LevelManager.SetNextSpawnPoint(spawnPointName);
             SceneManager.LoadScene(sceneToLoad);
         }
     }
